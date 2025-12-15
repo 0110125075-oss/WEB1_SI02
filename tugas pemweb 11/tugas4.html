@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+<div id="slider">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxekreUGpN11IqMbl1ZIdjYyUrJaGZZrJc3w&s" width="200"> 
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThOKn9i153cL-sLvkX8uk89C6Ig6cFG7Swww&s" width="200">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStR26NcdViC6CdEYvA521j55L-VE2QmLn0RQ&s" width="150"> 
+</div>
+<button id="prev">prev</button> 
+<button id="next">next</button>
+
+<script>
+    let index = 0;
+    let img = $ ("#slider img");
+
+    $("#next").click(function(){
+        $(img[index]).fadeOut(300, function(){
+            index = (index + 1) % img.length;
+            $(img[index]).fadeIn(300);
+        });
+    });
+
+    $("#prev").click(function(){
+        $(img[index]).fadeOut(300, function(){
+            index = (index + 1) % img.length;
+            $(img[index]).fadeIn(300);
+        });
+    });
+</script>
+
+
+</body>
+</html>

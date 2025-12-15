@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 1</title>
+</head>
+<body>
+    <h1 id="">BIODATA</h1>
+
+        <p id="nama">bahlil</p>
+        <p id="prodi">teknik sipil</p>
+        <p id="nim">0110125075</p>
+
+    <img id="fotoku" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpOOtf7LthHk84DZGm2npOMVpgctOUDXcDxw&s " width="200"><br>
+      <button onclick="ubahnama()">ubah nama </button>
+      <button onclick="ubahprodi()">ubah prodi</button>
+      <button onclick="gantifoto()">ganti foto</button>
+      <button onclick="sembunyikanbiodata()">sembunyikan biodata</button>
+      <button onclick="tampilkanbiodata()">tampilkan biodata</button>
+
+
+<script>
+    function ubahnama(){
+        document.getElementById("nama").innerHTML="<b>ABDUL ROHMAN</b>";
+    }
+    function ubahprodi(){
+        document.getElementById("prodi").innerHTML="sistem informasi";
+    }
+    function gantifoto(){
+        document.getElementById("fotoku").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd2qGe6Vm_B0azu3wEu7XQJlBnThTrJDg5zA&s";
+    }
+    function sembunyikanbiodata(){
+        document.getElementById("nama").style.display="none";
+        document.getElementById("prodi").style.display="none";
+        document.getElementById("nim").style.display="none";
+         document.getElementById("fotoku").style.display="none";
+    }
+    function tampilkanbiodata(){
+        document.getElementById("nama").style.display="block";
+        document.getElementById("prodi").style.display="block";
+       document.getElementById("nim").style.display="block";
+       document.getElementById("fotoku").style.display="block";
+    }
+</script>
+</body>
+</html>
